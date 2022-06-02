@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/BT21"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="60dp">
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/spinnerItem" />
 
     <EditText
         android:id="@+id/editTextActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" />
+
+    <ListView
+        android:id="@+id/ListViewToDo"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_weight="1" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,21 +35,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/add" />
+            android:text="@string/add"
+            app:backgroundTint="#018786" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/delete"
+            app:backgroundTint="#018786" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp" />
 
         <Button
             android:id="@+id/buttonClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/clear" />
+            android:text="@string/clear"
+            app:backgroundTint="#018786" />
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/ListViewToDo"
-        android:layout_width="match_parent"
-        android:layout_height="7dp"
-        android:layout_weight="1" />
 
 </LinearLayout>
